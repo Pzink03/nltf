@@ -1,6 +1,7 @@
 import { relations } from "drizzle-orm"
 import { integer, pgEnum, pgTable, text } from "drizzle-orm/pg-core"
 import { createdAt, id, updatedAt } from "../schemaHelpers"
+import { ProductBundleTable } from "./productBundle"
 
 export const bundleStatuses = ["public", "private"] as const
 export type BundleStatuses = (typeof bundleStatuses)[number]
@@ -17,6 +18,6 @@ export const BundleTable = pgTable("bundles", {
   updatedAt,
 })
 
-export const CourseRelationships = relations(ProductTable, ({ one, many }) => ({
-  test: one(),
+export const BundleRelationships = relations(BundleTable, ({ many }) => ({
+  productBundle: many(ProductBundleTable),
 }))

@@ -1,8 +1,9 @@
 import { relations } from "drizzle-orm"
-import { pgTable, text, timestamp, uuid } from "drizzle-orm/pg-core"
+import { pgTable, text } from "drizzle-orm/pg-core"
 import { createdAt, id, updatedAt } from "../schemaHelpers"
+import { ProductBundleTable } from "./productBundle"
 
-export const ProductTable = pgTable("courses", {
+export const ProductTable = pgTable("products", {
   id,
   name: text().notNull(),
   description: text().notNull(),
@@ -10,6 +11,6 @@ export const ProductTable = pgTable("courses", {
   updatedAt,
 })
 
-export const CourseRelationships = relations(ProductTable, ({ one, many }) => ({
-  test: one(),
+export const CourseRelationships = relations(ProductTable, ({ many }) => ({
+ productBundle: many(ProductBundleTable),
 }))

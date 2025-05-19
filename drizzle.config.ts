@@ -3,7 +3,7 @@ import { defineConfig } from "drizzle-kit"
 
 export default defineConfig({
   out: "./src/drizzle/migrations", //Where we output our migrations
-  schema: "./src/drizzle.schema.ts",
+  schema: "./src/drizzle/schema.ts",
   dialect: "postgresql",
   strict: true,
   verbose: true, //Security measure asking us to confirm deletion of files etc.
