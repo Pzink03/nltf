@@ -3,6 +3,13 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --font-raleway: "Raleway", "san-serif";
+  --font-helvetica: "Arial, Helvetica", "san-serif";
+  --font-rubik: "Rubik", "san-serif";
+  --font-playwrite: "Playwrite AU VIC";
+  --color-primary-green: var(--color-primary-green);
+  --color-secondary-green: var(--color-secondary-green);
+  --color-secondary-darkgreen: var(--color-secondary-darkgreen);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -43,6 +50,9 @@
 }
 
 :root {
+  --color-primary-green: oklch(0.5307 0.102 150.7);
+  --color-secondary-green: oklch(0.9466 0.01 140.6);
+  --color-secondary-darkgreen: oklch(0.3271 0.03 152.4);
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
