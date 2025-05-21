@@ -1,6 +1,6 @@
 "use client"
 
-import { courseSchema } from "@/features/courses/schemas/schema"
+import { courseSchema } from "@/features/products/schemas/schema"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
