@@ -50,6 +50,8 @@
 }
 
 :root {
+  --container-padding: 2rem;
+  --container-screen-sm: 1500px;
   --color-primary-green: oklch(0.5307 0.102 150.7);
   --color-secondary-green: oklch(0.9466 0.01 140.6);
   --color-secondary-darkgreen: oklch(0.3271 0.03 152.4);
